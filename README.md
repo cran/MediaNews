@@ -1,14 +1,13 @@
 ## MediaNews - Introduction
   
-An implementation to perform analysis on different media channels by extracting textual data from its source, based on users choice of keywords. These data can be used to perform text analysis in order to identify patterns in respective media reporting. The media channels used in this package are print media from india. The data (or news) used are publically available to consumers.
+An implementation to perform analysis on different media channels by extracting textual data from its source, based on users choice of keywords. These data can be used to perform text analysis in order to identify patterns in respective media reporting. The media channels used in this package are print media from India. The data (or news) used are publicly available to consumers.
 #### Prerequisites
 
 For this package to run into your system (R or RStudio) following packages are requried:
 
 * rvest
-* lubridate
-* svMisc
 * xml2
+* lubridate
 * stopwords
 
 #### Installing
@@ -17,7 +16,7 @@ You can install the library as follows:
 
 ```r
 ### Install Prerequisites
-pkgs <- c("rvest","lubridate","svMisc","xml2","stopwords")
+pkgs <- c("rvest","xml2","lubridate","stopwords")
 install.packages(pkgs)
 ### Load Prerequisites - Not Requried. Installation well be enough 
 lapply(pkgs, library, character.only = TRUE)

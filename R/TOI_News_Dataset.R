@@ -13,6 +13,7 @@
 #'@import xml2
 #'@import lubridate
 #'@importFrom stats na.omit
+#'@importFrom utils winProgressBar setWinProgressBar
 #'
 #'@seealso \code{\link{TOI_News_Articles}}
 #'

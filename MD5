@@ -1,9 +1,12 @@
-64ee684c39a81329a8b3274f76a68e6e *DESCRIPTION
-e80c5cdf03411e02c2ef14842c95baf2 *NAMESPACE
+18d32bfbc3943f21095d7a8add2e1549 *DESCRIPTION
+4c8ec99fc25f8d52b0a9d9efd66f4085 *NAMESPACE
 a423ef72c17f2914d9b4a16e93f1a490 *R/ClearText.R
-4c9a582e72c27365cffc3c7d94d593c5 *R/TOI_News_Articles.R
-23b81479608f108bf6eb6bf023dd5fde *R/TOI_News_Dataset.R
-97fdebbd5e0421ad1117ccc23e0cf9d5 *README.md
+d0f4d68ec4376b78e9c424776154c590 *R/TOI_News_Articles.R
+e5d5ac5dfd006ea5f5eaf81572bdae78 *R/TOI_News_Dataset.R
+5ca98a6f1811442f600fe0d98cc01c43 *R/emoji_Data.R
+a4c0eba728df1b81de1b6289af6cd386 *README.md
+e6fc8ac2a5063a6f88125d293933ef40 *data/emoji_Data.rda
 a44070bcd7fdff1d5ecac3360b909303 *man/ClearText.Rd
 654b288156e9a98646ab2788eed8a7ff *man/TOI_News_Articles.Rd
 060425c687b2a4d31190692d18b42be3 *man/TOI_News_Dataset.Rd
+f52aedcbb1fc32068ad2dc2e202f3221 *man/emoji_Data.Rd

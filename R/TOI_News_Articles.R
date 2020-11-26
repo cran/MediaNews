@@ -26,6 +26,7 @@
 #'@import xml2
 #'@import lubridate
 #'@importFrom stats na.omit
+#'@importFrom utils winProgressBar setWinProgressBar
 #'
 #'@seealso \code{\link{TOI_News_Dataset}}
 #'
@@ -82,6 +83,7 @@ TOI_News_Articles <- function(keywords, AsDataFrame = TRUE, start_date = NULL, e
 
   }else{
     message("\n\n!...Extraction Begins...!\n\n")
+    pb <- winProgressBar(title = "Extracting...", min = 0, max = length(TOI_links), width = 250)
     for (web_url_link in TOI_links){
       # Reading the HTML code from the website
       webpage <- read_html(web_url_link)
@@ -137,10 +139,12 @@ TOI_News_Articles <- function(keywords, AsDataFrame = TRUE, start_date = NULL, e
         ExtractData[[l_index]] <- text_dt
 
         # message(paste0(rep('>', l_index / length(TOI_links) * options()$width), collapse = ''))
-        message(paste0(round(l_index / length(TOI_links)*100), '% completed'))
-        Sys.sleep(.05)
+        # message(paste0(round(l_index / length(TOI_links)*100), '% completed'))
+        setWinProgressBar(pb, l_index, title = paste0( round(l_index/length(TOI_links)*100), "% completed"))
+        Sys.sleep(.01)
 
         if (l_index == length(TOI_links)){
+          close(pb)
           ExtractedDf <- do.call(rbind, ExtractData)
           dataset <- cbind(dataset, ExtractedDf)
           # dataset[[4]] <- I(ExtractData)
